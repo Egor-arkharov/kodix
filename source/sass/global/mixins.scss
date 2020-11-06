@@ -1,0 +1,23 @@
+@mixin basic-font {
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+}
+
+@mixin font-s {
+  @include basic-font;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+}
+
+@mixin font-m {
+  @include basic-font;
+  font-size: $font-size-m;
+  line-height: $line-height-m;
+}
+
+@mixin font-l {
+  @include basic-font;
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+}
