@@ -2,25 +2,31 @@ $main-font: "LabGrotesque", "Аrial", sans-serif;
 $main-font-bold: "LabGrotesque-Bold", "Аrial", sans-serif;
 
 $brand-color: #ea0029;
-$brand-background-color: linear-gradient(255.35deg, #DC3131 0.83%,
-rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+$brand-background-color: linear-gradient(255.35deg, #DC3131 0.83%,rgba(255, 79, 79, 0) 108.93%), #FF5E56;
 $popup-background-color: rgba(0, 0, 0, 0.3);
 
 $text-color: #000000;
-$text-gery-color: #808080;
+$text-alt-color: #808080;
 
 $disabled-color: #bec5cc;
 $white-color: #ffffff;
 
+$button-background-color: #eef0f2;
+
+$font-size-xs: 12px;
+$line-height-xs: 16px;
 
 $font-size-s: 14px;
-$line-height-ss: 24px;
+$line-height-s: 24px;
 
 $font-size-m: 16px;
 $line-height-m: 24px;
 
-$font-size-l: 28px;
-$line-height-l: 40px;
+$font-size-l: 18px;
+$line-height-l: 24px;
+
+$font-size-xl: 28px;
+$line-height-xl: 40px;
 
 
 $mobile-width: 320px;

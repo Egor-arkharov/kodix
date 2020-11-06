@@ -1,0 +1,48 @@
+.popup {
+  position: relative;
+  height: 100vh;
+
+  padding: 32px 16px 16px;
+  background-color: $white-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.popup__title {
+  @include font-l;
+  font-family: $main-font-bold;
+  margin-bottom: 16px;
+}
+
+.popup__text {
+  @include font-xs;
+  margin-bottom: 24px;
+  color: $text-alt-color;
+}
+
+.popup__calc {
+  @include font-s;
+  font-family: $main-font-bold;
+  color: $brand-color;
+  margin-bottom: 24px;
+}
+
+.popup__button {
+  @include font-xs;
+  font-family: $main-font-bold;
+
+  margin-top: auto;
+
+  width: 100%;
+  padding: 12px;
+  background: $brand-background-color;
+  color: $white-color;
+}
+
+.popup__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}

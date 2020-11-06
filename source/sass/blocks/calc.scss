@@ -1,0 +1,18 @@
+.calc {
+  border: none;
+
+}
+
+.calc__text {
+  @include font-s;
+  font-family: $main-font-bold;
+}
+
+.calc__label {
+  @include font-s;
+  color: $text-alt-color;
+}
+
+.calc__sum {
+  color: $text-color;
+}

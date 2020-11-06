@@ -1,0 +1,25 @@
+.choice__text {
+  @include font-s;
+  font-family: $main-font-bold;
+  margin-bottom: 24px;
+}
+
+.choice__list {
+  display: flex;
+}
+
+.choice__item {
+  margin-right: 8px;
+}
+
+.choice__button {
+  @include font-s;
+  background-color: $button-background-color;
+  padding: 6px 12px;
+  border-radius: 50px;
+
+  &--active {
+    color: $white-color;
+    background: $brand-background-color;
+  }
+}
