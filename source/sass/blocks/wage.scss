@@ -1,0 +1,12 @@
+.wage__label {
+  @include font-s;
+  font-family: $main-font-bold;
+  margin-bottom: 8px;
+}
+
+.wage__input {
+  @include font-s;
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}

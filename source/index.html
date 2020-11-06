@@ -7,8 +7,8 @@
     <meta name="description" content="Налоговый вычет">
     <title>Налоговый вычет</title>
     <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="preload" href="./fonts/LabGrotesque-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="./fonts/LabGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <!-- <link rel="preload" href="./fonts/LabGrotesque-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="./fonts/LabGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin=""> -->
   </head>
   <body>
     <main class="main">
@@ -34,6 +34,9 @@
           </ul>
         </div>
         <button class="popup__button">Добавить</button>
+        <button class="popup__close" type="button">
+          <img class="popup__close-img" src="img/icons/close.svg" alt="Закрыть">
+        </button>
       </div>
     </template>
 
@@ -72,5 +75,7 @@
         </ul>
       </fieldset>
     </template>
+
+    <script src="js/popup.js"></script>
   </body>
 </html>
