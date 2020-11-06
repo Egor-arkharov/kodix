@@ -11,5 +11,66 @@
     <link rel="preload" href="./fonts/LabGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin="">
   </head>
   <body>
+    <main class="main">
+      <h1 class="visually-hidden">Налоговый вычет</h1>
+      <button class="main__button">Налоговый вычет</button>
+    </main>
+
+    <template id="popup">
+      <div class="popup">
+        <p class="popup__title">Налоговый вычет</p>
+        <p class="popup__text">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового
+          вычета составляет не более 13% от своего официального годового дохода.</p>
+        <div class="popup__wage wage">
+          <label class="wage__label" for="wage">Ваша зарплата в месяц</label>
+          <input class="wage__input" type="number" name="wage" id="wage" placeholder="Введите данные" min="1">
+        </div>
+        <button class="popup__calc">Рассчитать</button>
+        <div class="popup__choice choice">
+          <p class="choice__text">Что уменьшаем?</p>
+          <ul class="choice__list">
+            <li class="choice__item"><button class="choice__button choice__button--active">Платёж</button></li>
+            <li class="choice__item"><button class="choice__button">Срок</button></li>
+          </ul>
+        </div>
+        <button class="popup__button">Добавить</button>
+      </div>
+    </template>
+
+    <template id="calc">
+      <fieldset class="calc">
+        <legend class="calc__legend"><p class="calc__text">Итого можете внести в качестве досрочных:</p></legend>
+        <ul class="calc__list">
+          <li class="calc__item">
+            <label class="calc__label" for="1-year">
+            <input class="calc__input-checkbox" type="checkbox" name="1-year" id="1-year" checked>
+            <span class="calc__checkbox"></span>
+              <span class="calc__sum">78 000 рублей</span> в 1-ый год
+            </label>
+          </li>
+          <li class="calc__item">
+            <label class="calc__label" for="2-year">
+            <input class="calc__input-checkbox" type="checkbox" name="2-year" id="2-year" checked>
+            <span class="calc__checkbox"></span>
+              <span class="calc__sum">78 000 рублей</span> в 2-ой год
+            </label>
+          </li>
+          <li class="calc__item">
+            <label class="calc__label" for="3-year">
+            <input class="calc__input-checkbox" type="checkbox" name="3-year" id="3-year" checked>
+            <span class="calc__checkbox"></span>
+              <span class="calc__sum">78 000 рублей</span> в 3-ий год
+            </label>
+          </li>
+          <li class="calc__item">
+            <label class="calc__label" for="4-year">
+            <input class="calc__input-checkbox" type="checkbox" name="4-year" id="4-year">
+            <span class="calc__checkbox"></span>
+              <span class="calc__sum">26 000 рублей</span> в 4-ый год
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+    </template>
   </body>
 </html>
