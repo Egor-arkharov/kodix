@@ -7,13 +7,13 @@
     <meta name="description" content="Налоговый вычет">
     <title>Налоговый вычет</title>
     <link rel="stylesheet" href="./css/style.min.css">
-    <!-- <link rel="preload" href="./fonts/LabGrotesque-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="./fonts/LabGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin=""> -->
+    <link rel="preload" href="./fonts/LabGrotesque-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="./fonts/LabGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin="">
   </head>
   <body>
     <main class="main">
       <h1 class="visually-hidden">Налоговый вычет</h1>
-      <button class="main__button">Налоговый вычет</button>
+      <button class="main__button button-big">Налоговый вычет</button>
     </main>
 
     <template id="popup">
@@ -25,7 +25,7 @@
           <label class="wage__label" for="wage">Ваша зарплата в месяц</label>
           <input class="wage__input" type="number" name="wage" id="wage" placeholder="Введите данные" min="1">
         </div>
-        <button class="popup__calc">Рассчитать</button>
+        <button class="popup__calc button-text">Рассчитать</button>
         <div class="popup__choice choice">
           <p class="choice__text">Что уменьшаем?</p>
           <ul class="choice__list">
@@ -33,7 +33,7 @@
             <li class="choice__item"><button class="choice__button">Срок</button></li>
           </ul>
         </div>
-        <button class="popup__button">Добавить</button>
+        <button class="popup__button button-big">Добавить</button>
         <button class="popup__close" type="button">
           <img class="popup__close-img" src="img/icons/close.svg" alt="Закрыть">
         </button>
@@ -46,28 +46,28 @@
         <ul class="calc__list">
           <li class="calc__item">
             <label class="calc__label" for="1-year">
-            <input class="calc__input-checkbox" type="checkbox" name="1-year" id="1-year" checked>
+            <input class="calc__input visually-hidden" type="checkbox" name="1-year" id="1-year" checked>
             <span class="calc__checkbox"></span>
               <span class="calc__sum">78 000 рублей</span> в 1-ый год
             </label>
           </li>
           <li class="calc__item">
             <label class="calc__label" for="2-year">
-            <input class="calc__input-checkbox" type="checkbox" name="2-year" id="2-year" checked>
+            <input class="calc__input visually-hidden" type="checkbox" name="2-year" id="2-year" checked>
             <span class="calc__checkbox"></span>
               <span class="calc__sum">78 000 рублей</span> в 2-ой год
             </label>
           </li>
           <li class="calc__item">
             <label class="calc__label" for="3-year">
-            <input class="calc__input-checkbox" type="checkbox" name="3-year" id="3-year" checked>
+            <input class="calc__input visually-hidden" type="checkbox" name="3-year" id="3-year" checked>
             <span class="calc__checkbox"></span>
               <span class="calc__sum">78 000 рублей</span> в 3-ий год
             </label>
           </li>
           <li class="calc__item">
             <label class="calc__label" for="4-year">
-            <input class="calc__input-checkbox" type="checkbox" name="4-year" id="4-year">
+            <input class="calc__input visually-hidden" type="checkbox" name="4-year" id="4-year">
             <span class="calc__checkbox"></span>
               <span class="calc__sum">26 000 рублей</span> в 4-ый год
             </label>

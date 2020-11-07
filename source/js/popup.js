@@ -9,8 +9,7 @@
 
   let main = document.querySelector('.main');
   let mainBtn = main.querySelector('.main__button');
-
-
+  let calc = document.querySelector('#calc').content.querySelector('.calc');
 
   let onPopupEscPress = function (evt) {
     if (evt.key === EvtKeys.ESCAPE) {
@@ -22,24 +21,46 @@
   let openPopup = function () {
     let popup = document.querySelector('#popup').content.cloneNode(true);
 
-
     mainBtn.classList.add('visually-hidden');
+    main.classList.add('main--active');
     main.appendChild(popup);
 
     let popupClose = document.querySelector('.popup__close');
 
     document.addEventListener('keydown', onPopupEscPress);
     popupClose.addEventListener('click', closePopup);
+
+    let calcBtn = document.querySelector('.popup__calc');
+    calcBtn.addEventListener('click', openCalc);
+
+    let choiceList = document.querySelector('.choice__list');
+    choiceList.addEventListener('click', changeChoice);
   };
 
   let closePopup = function () {
-    var popup = document.querySelector('.popup');
+    let popup = document.querySelector('.popup');
+    popup.remove();
 
     mainBtn.classList.remove('visually-hidden');
-    popup.remove();
+    main.classList.remove('main--active');
+
     document.removeEventListener('keydown', onPopupEscPress);
     mainBtn.addEventListener('click', openPopup);
   };
+
+
+  let openCalc = function () {
+    let calcBtn = document.querySelector('.popup__calc');
+    calcBtn.insertAdjacentElement('afterend', calc);
+    calcBtn.removeEventListener('click', openCalc);
+  }
+
+  let changeChoice = function (evt) {
+
+    if (evt.target.tagName === 'BUTTON') {
+      evt.target.classList.toggle('choice__button--active');
+    }
+  }
 
   mainBtn.addEventListener('keydown', function (evt) {
     if (evt.key === EvtKeys.ENTER) {

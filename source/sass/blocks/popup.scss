@@ -1,6 +1,7 @@
 .popup {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 800px;
 
   padding: 32px 16px 16px;
   background-color: $white-color;
@@ -25,7 +26,6 @@
 .popup__calc {
   @include font-s;
   font-family: $main-font-bold;
-  color: $brand-color;
   margin-bottom: 24px;
 }
 
@@ -37,12 +37,56 @@
 
   width: 100%;
   padding: 12px;
-  background: $brand-background-color;
+
   color: $white-color;
+
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
 }
 
 .popup__close {
+  width: 12px;
+  height: 12px;
+
   position: absolute;
   top: 22px;
   right: 22px;
+
+  &:focus {
+    outline: 1px solid #000000;
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .popup {
+    min-height: auto;
+    width: 453px;
+    top: 120px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+  }
+
+  .popup__title {
+    @include font-xl;
+    font-family: $main-font-bold;
+    margin-bottom: 16px;
+  }
+
+  .popup__text {
+    @include font-s;
+    margin-bottom: 24px;
+  }
+
+  .popup__button {
+    @include font-m;
+    font-family: $main-font-bold;
+    margin-top: auto;
+    padding: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popup {
+   width: 552px;
+  }
 }

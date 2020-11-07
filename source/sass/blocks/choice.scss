@@ -1,3 +1,7 @@
+.choice {
+  margin-bottom: 20px;
+}
+
 .choice__text {
   @include font-s;
   font-family: $main-font-bold;
@@ -14,12 +18,36 @@
 
 .choice__button {
   @include font-s;
-  background-color: $button-background-color;
+  background: $button-background-color;
   padding: 6px 12px;
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    background: $border-color;
+  }
 
   &--active {
     color: $white-color;
     background: $brand-background-color;
+
+    &:hover,
+    &:focus {
+      background: $brand-color;
+    }
+
   }
+}
+
+@media (min-width: $tablet-width) {
+  .choice {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .choice__text {
+    margin-right: 76px;
+  }
+
+
 }

@@ -1,3 +1,7 @@
+.wage {
+  width: 100%;
+}
+
 .wage__label {
   @include font-s;
   font-family: $main-font-bold;
@@ -9,4 +13,24 @@
   width: 100%;
   padding: 8px 10px;
   margin-bottom: 8px;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  outline: none;
+
+  &:hover {
+    border-color: #000000;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $border-color;
+  }
+
+  &:disabled {
+    border-color: $text-alt-color;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $brand-color;
+  }
 }
