@@ -1,20 +1,40 @@
 .main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $brand-background-color;
+  overflow-y: auto;
 }
 
 .main__button {
   @include font-xs;
+  font-family: $main-font-bold;
+
   padding: 12px 24px;
   color: $white-color;
+  background: none;
+
   border: 1px solid $white-color;
-  border-radius: 6px;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $brand-color;
+    border: 1px solid $white-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main__button {
+    @include font-m;
+    font-family: $main-font-bold;
+
+    padding: 16px 32px;
+  }
+
+  .main--active {
+    padding-bottom: 40px;
+    align-items: start;
+    background: $popup-background-color;
   }
 }

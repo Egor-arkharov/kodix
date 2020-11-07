@@ -27,3 +27,9 @@
   font-size: $font-size-l;
   line-height: $line-height-l;
 }
+
+@mixin font-xl {
+  @include basic-font;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+}

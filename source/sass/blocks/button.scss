@@ -1,0 +1,23 @@
+.button-text {
+  color: $brand-color;
+
+  &:hover,
+  &:focus {
+    color: $button-text-hover-color;
+  }
+
+  &:active {
+    color: $brand-color;
+  }
+}
+
+.button-big {
+  background: $brand-background-color;
+  border-radius: 6px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $brand-color;
+  }
+}
