@@ -76,10 +76,9 @@ gulp.task("server", function () {
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.otf",
+    "source/fonts/**",
     "source/img/**",
-    "source/js/**",
-    "source/*.ico"
+    "source/js/**"
     ], {
     base: "source"
     })

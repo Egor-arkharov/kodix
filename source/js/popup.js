@@ -9,7 +9,7 @@
 
   let main = document.querySelector('.main');
   let mainBtn = main.querySelector('.main__button');
-  let calc = document.querySelector('#calc').content.querySelector('.calc');
+
 
   let onPopupEscPress = function (evt) {
     if (evt.key === EvtKeys.ESCAPE) {
@@ -50,13 +50,27 @@
 
 
   let openCalc = function () {
-    let calcBtn = document.querySelector('.popup__calc');
-    calcBtn.insertAdjacentElement('afterend', calc);
-    calcBtn.removeEventListener('click', openCalc);
+    let popup = document.querySelector('.popup');
+    let choice = document.querySelector('.choice');
+    let wage = document.querySelector('.wage__input');
+
+    if (wage.value) {
+      let currentCalc = document.querySelector('.calc');
+
+      if (currentCalc) {
+        currentCalc.remove();
+      }
+
+      window.form.calc();
+
+      let calc = document.querySelector('#calc').content.cloneNode(true);
+      popup.insertBefore(calc, choice);
+
+      window.form.removeSums();
+    }
   }
 
   let changeChoice = function (evt) {
-
     if (evt.target.tagName === 'BUTTON') {
       evt.target.classList.toggle('choice__button--active');
     }
