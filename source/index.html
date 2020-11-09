@@ -21,19 +21,21 @@
         <p class="popup__title">Налоговый вычет</p>
         <p class="popup__text">Используйте налоговый вычет чтобы погасить ипотеку досрочно. Размер налогового
           вычета составляет не более 13% от своего официального годового дохода.</p>
-        <div class="popup__wage wage">
-          <label class="wage__label" for="wage">Ваша зарплата в месяц</label>
-          <input class="wage__input" type="number" name="wage" id="wage" placeholder="Введите данные" min="1">
-        </div>
-        <button class="popup__calc button-text" type="button">Рассчитать</button>
-        <div class="popup__choice choice">
-          <p class="choice__text">Что уменьшаем?</p>
-          <ul class="choice__list">
-            <li class="choice__item"><button class="choice__button choice__button--active" type="button">Платёж</button></li>
-            <li class="choice__item"><button class="choice__button" type="button">Срок</button></li>
-          </ul>
-        </div>
-        <button class="popup__button button-big" type="button">Добавить</button>
+        <form class="popup__form" method="post" enctype="multipart/form-data" autocomplete="off">
+          <div class="popup__wage wage">
+            <label class="wage__label" for="wage">Ваша зарплата в месяц</label>
+            <input class="wage__input" type="number" name="wage" id="wage" placeholder="Введите данные" min="1">
+          </div>
+          <button class="popup__calc button-text" type="button">Рассчитать</button>
+          <div class="popup__choice choice">
+            <p class="choice__text">Что уменьшаем?</p>
+            <ul class="choice__list">
+              <li class="choice__item"><button class="choice__button choice__button--active" type="button">Платёж</button></li>
+              <li class="choice__item"><button class="choice__button" type="button">Срок</button></li>
+            </ul>
+          </div>
+          <button class="popup__button button-big" type="submit">Добавить</button>
+        </form>
         <button class="popup__close" type="button">
           <img class="popup__close-img" src="img/icons/close.svg" alt="Закрыть">
         </button>

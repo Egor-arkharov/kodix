@@ -24,10 +24,9 @@
     mainBtn.classList.add('visually-hidden');
     main.classList.add('main--active');
     main.appendChild(popup);
+    document.addEventListener('keydown', onPopupEscPress);
 
     let popupClose = document.querySelector('.popup__close');
-
-    document.addEventListener('keydown', onPopupEscPress);
     popupClose.addEventListener('click', closePopup);
 
     let calcBtn = document.querySelector('.popup__calc');
@@ -35,6 +34,11 @@
 
     let choiceList = document.querySelector('.choice__list');
     choiceList.addEventListener('click', changeChoice);
+
+    let form = document.querySelector('.popup__form');
+    form.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+    })
   };
 
   let closePopup = function () {
@@ -50,7 +54,7 @@
 
 
   let openCalc = function () {
-    let popup = document.querySelector('.popup');
+    let form = document.querySelector('.popup__form');
     let choice = document.querySelector('.choice');
     let wage = document.querySelector('.wage__input');
 
@@ -64,7 +68,7 @@
       window.form.calc();
 
       let calc = document.querySelector('#calc').content.cloneNode(true);
-      popup.insertBefore(calc, choice);
+      form.insertBefore(calc, choice);
 
       window.form.removeSums();
     }

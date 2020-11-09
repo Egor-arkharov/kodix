@@ -66,16 +66,13 @@
   border: 1px solid #000000;
 }
 
-.calc__input:disabled + .calc__checkbox::before  {
+.calc__input:disabled + .calc__checkbox::before {
   border-color: $disabled-color;
 }
 
-.calc__input:checked:disabled + .calc__checkbox::before  {
+.calc__input:checked:disabled + .calc__checkbox::before {
   border-color: $disabled-color;
 }
-
-
-
 
 .calc__sum {
   color: $text-color;

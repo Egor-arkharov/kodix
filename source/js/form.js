@@ -14,7 +14,7 @@ let calc = function () {
   let sum3Year = calc.querySelector('[for="3-year"] .calc__sum');
   let sum4Year = calc.querySelector('[for="4-year"] .calc__sum');
 
-  let arr = [sum1Year, sum2Year, sum3Year, sum4Year];
+  let sumYears = [sum1Year, sum2Year, sum3Year, sum4Year];
 
   let wage = document.querySelector('.wage__input');
   let wageValue = wage.value;
@@ -23,11 +23,11 @@ let calc = function () {
 
   let currentSum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < sumYears.length; i++) {
     if (currentSum + payment >= MAX_PAYMENT) {
-      arr[i].innerHTML = (MAX_PAYMENT - currentSum).toLocaleString('ru') + ' рублей';
+      sumYears[i].innerHTML = (MAX_PAYMENT - currentSum).toLocaleString('ru') + ' рублей';
     } else {
-      arr[i].innerHTML = payment.toLocaleString('ru') + ' рублей';
+      sumYears[i].innerHTML = payment.toLocaleString('ru') + ' рублей';
     }
 
     currentSum += payment;
@@ -45,8 +45,6 @@ let removeSums = function () {
     }
   }
 }
-
-window.form = calc;
 
 window.form = {
   calc: calc,
